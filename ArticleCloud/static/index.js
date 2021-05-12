@@ -21,16 +21,16 @@ function suggestion() {
         }
     })
     .then(response => {
-        var items = document.getElementsByClassName("item");
-        const resolvedProm = Promise.resolve(response.text()); // items = response.text();
+        var contexts = document.getElementsByClassName("context");
+        const resolvedProm = Promise.resolve(response.text()); // contexts = response.text();
         let thenProm = resolvedProm.then(value => {
-            items[0].innerHTML = value;
-            console.log(items);
+            contexts[0].innerHTML = value;
+            console.log(contexts);
         });
     })
     .catch(e => { // Error
         console.log('Error');
-        var item = document.getElementsByClassName("item")[0];
-        item.innerHTML=e;
+        var context = document.getElementsByClassName("context")[0];
+        context.innerHTML=e;
     })
 }
