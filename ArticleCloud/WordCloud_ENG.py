@@ -28,7 +28,7 @@ mystopwords.update(['hahaha','hohoho'])
 # max_words=숫자 : 보여주고자 하는 단어의 최대수
 # mask=이미지 배열값 : 배경으로 할 이미지 (array형태여야 함)
 wc = WordCloud(background_color="white", max_words=2000, mask=alice_mask, stopwords=mystopwords)
-stevefile = 'source/AppleCar_ENG.txt'
+stevefile = 'source/bitcoin.txt'
 myfile = open(stevefile, 'rt', encoding='utf-8')
 text = myfile.read()
 wc = wc.generate(text)

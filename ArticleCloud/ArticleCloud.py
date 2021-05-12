@@ -8,18 +8,12 @@ params = {
 }
 response = requests.get(url, params=params)
 
-path = "./"
-file_list = os.listdir(path)
-file_list_py = [file for file in file_list if file.endswith(".txt")]
-
 if response.status_code == 200:
     res = response.text
     print(res)
     # 파일이 있는지 찾고 있으면 바로 덮어쓰기, 없으면 생성후 작성.
-    filename = "source/%s.txt" % params['input']
-
-    f = open(filename, 'w')
-    f.write(res)
-    f.close()
+    filename = "./source/%s.txt" % params['input']
+    with open(filename, 'w', encoding='utf-8') as f:
+        f.write(res)
 else:
 	print("Failed Request")
