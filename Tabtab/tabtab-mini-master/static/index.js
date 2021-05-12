@@ -14,7 +14,6 @@ function suggestion() {
         length = lengths[1].value;
     }
 
-
     var formData = new FormData(); 
     formData.append("context", context );
     formData.append("model", model);
