@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
             integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         
-        <script src="../static/index.js?ver=40"></script>
+        <script src="../static/index.js?ver=19"></script>
 
         <style>
             .item:hover {
@@ -22,7 +22,17 @@
                 
                 <b>Result</b>
                 <ul style="width:100%;" class="context"></ul>
-                <button id="btn_autocomplete" class="btn btn-primary" onclick="suggestion()">Show context!</button>
+                <button id="btn_context" class="btn btn-primary" onclick="suggestion()">Show context!</button>
+                <div id="select_box" src="">
+                    <ul style="width:100%">
+                        <li class="item" onclick="seletion(this.innerHTML)"></li>
+                        <li class="item" onclick="seletion(this.innerHTML)"></li>
+                        <li class="item" onclick="seletion(this.innerHTML)"></li>
+                        <li class="item" onclick="seletion(this.innerHTML)"></li>
+                    </ul>
+                </div>
+                <button id="btn_wordcloud" class="btn btn-primary" onclick="GenerateWordcloud()">Show WordCloud!</button>
+                <button id="btn_news" class="btn btn-primary" onclick="GetNews()">Get News!</button>
             </div>
         </div>
     </body>
