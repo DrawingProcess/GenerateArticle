@@ -23,8 +23,3 @@ If you don't know how to use requests, It will help you.
 $ pip install requests
 $ python3 requests_example.py
 ```
-
-+ Article.py 
-Article title to Article context using API GPT2-Article-Large2
-+ ArticleCloud.py 
-Article title to Article context using API GPT2-Article-Large2 && Generate WordCloud using Article context

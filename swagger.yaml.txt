@@ -1,0 +1,39 @@
+openapi: 3.0.0   # Open api version
+
+info:   # Set basic infomation
+  title: your-swagger-example
+  version: 0.1.1
+
+servers:   # Set your server endpoint
+  - url: https://master-GenerateArticle-DrawingProcess.endpoint.ainize.ai
+
+paths:
+  /path/to/get/method:   # GET method path
+    get:
+      summary: your get method
+      description: your get method's description
+      parameters:   # Set parameter values here
+        - name: param1   # Set parameter name
+          in: query   # Select amongst query, header, path, and cookie
+          required: true
+          allowReserved: true   # Option for percent-encoding, default; false 
+          schema:
+            type: string
+      responses:   # Set response
+        '200':
+          description: Successful Response
+          content:   # Descriptions of potential response payloads (optional)
+            application/json:
+              schema:   # Set data types
+                type: object
+                properties:
+                  score:
+                    type: number
+        '400':
+          description: Bad Request Error
+        '500':
+          description: Server-side Error
+        '503':
+          description: Server is not ready
+        default: 
+          description: Unexpected Error 
