@@ -1,0 +1,5 @@
+wordcloud
+requests
+flask==1.1.2
+requests==2.25.0
+waitress==1.4.4

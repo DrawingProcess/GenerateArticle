@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        
+        <script src="../static/index.js?ver=40"></script>
+
+        <style>
+            .item:hover {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron mt-3">
+                <h1>Generate Article</h1>
+                <p>Write your title of Article!</p>
+
+                <textarea id="input" style="width:100%; height:10%; display: block; margin-bottom: 15px;"></textarea>
+                
+                <b>Result</b>
+                <ul style="width:100%;" class="context"></ul>
+                <button id="btn_autocomplete" class="btn btn-primary" onclick="suggestion()">Show context!</button>
+            </div>
+        </div>
+    </body>
+</html>
