@@ -1,6 +1,8 @@
 # Generate Article
 
-[Generate Article](https://kubecon-tabtab-jeong-hyun-su.endpoint.ainize.ai/) | [Generate Article](https://github.com/Jeong-Hyun-Su/tabtab) | [Generate Article on Ainize](https://ainize.ai/Jeong-Hyun-Su/tabtab?branch=kubecon)
+[![Run on Ainize](https://ainize.ai/images/run_on_ainize_button.svg)](https://ainize.web.app/redirect?git_repo=https://github.com/DrawingProcess/GenerateArticle)
+
+[Generate Article](https://master-generate-article-drawing-process.endpoint.ainize.ai) | [Generate Article](https://github.com/DrawingProcess/GenerateArticle) | [Generate Article on Ainize](https://ainize.ai/DrawingProcess/GenerateArticle?branch=master)
 
 ## Prerequired 
 
