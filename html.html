@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <title>이미지 선택 및 화면출력 예</title>
+  <script type="text/javascript">
+   
+    function doClick() {
+      var el = document.getElementById("fileElem");
+      if (el) {
+        el.click();
+      }
+    }
+     
+    function handleFiles(files) {
+      var d = document.getElementById("fileList");
+      if (!files.length) {
+        d.innerHTML = "<p>선택된 파일 없음!</p>";
+      } else {
+ 
+        var img = document.createElement("img");
+        img.src = window.URL.createObjectURL(files[0]);;
+        //img.height = 100;
+        img.onload = function() {
+          window.URL.revokeObjectURL(this.src);
+        }
+        document.body.appendChild(img);
+        console.log(img)
+         
+        var info = document.createElement("div");
+        info.innerHTML = files[0].name + ": " + files[0].size + " bytes";
+        document.body.appendChild(info);
+      }
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+  </form>
+  <a href="javascript:doClick()">Select some files</a>
+  <div id="fileList"></div>
+</body>
+</html>

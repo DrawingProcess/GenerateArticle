@@ -1,4 +1,5 @@
 from flask import Flask, request, Response, render_template, jsonify
+from werkzeug.utils import secure_filename
 import requests
 import time
 import random
@@ -15,7 +16,7 @@ def gpt2():
     }
     response = requests.get(url, params=params)
     res = response.text
-    filename = "source/%s.txt" % input
+    filename = "static/images/%s.txt" % input
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(res)
     print(res)
@@ -32,7 +33,7 @@ def main():
 
 @app.route('/news')
 def getNews():
-   return render_template('news.html')
+   return render_template('news.html', image_file='images/graph01.png')
 
 if __name__ == "__main__":
     from waitress import serve
