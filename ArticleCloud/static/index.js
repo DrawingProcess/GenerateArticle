@@ -38,11 +38,10 @@ function suggestion() {
 function GenerateWordcloud(){
     console.log('Generating..');
     var items = document.getElementsByClassName("item");
-    for (let index = 1; index <= 4; index++) {
-        image_src = "static/images/graph0" + index + ".png";
-        console.log(image_src);
-        items[index - 1].innerHTML = "<img src=image_src width='100'/>";
-    }
+    items[0].innerHTML = "<img src='static/images/graph01.png' width='300' />";
+    items[1].innerHTML = "<img src='static/images/graph02.png' width='300' />";
+    items[2].innerHTML = "<img src='static/images/graph03.png' width='300' />";
+    items[3].innerHTML = "<img src='static/images/graph04.png' width='300' />";
 }
 function GetNews(){
     console.log('Get News..');
@@ -67,5 +66,6 @@ function GetNews(){
 function selection(image) {
     var select = document.getElementsByClassName("selection");
     console.log(image);
-    select = image;
+    select.innerHTML = image;
+    return select.innerHTML;
 }

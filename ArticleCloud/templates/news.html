@@ -1,19 +1,15 @@
 <html>
-    <head>
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    </head>
     <body>
         <div class="container">
             <div class="jumbotron mt-3">
-                <h1 class="input">title</h1>
+                <title> {{ input }} </title>
+                <h1 class="input"> {{ input }} </h1>
                 {% if True %}
-                <div>
+                <div id="selection">
                     <img src="{{ url_for('static', filename=image_file) }}" width=500/>
                 </div>
                 {% endif %}
-                <p class="selection">contents</p>
+                <!-- <p class="selection">images</p> -->
                 <p class="content">contents</p>
 
                 <textarea id="input" style="width:100%; height:10%; display: block; margin-bottom: 15px;"></textarea>

@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
             integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         
-        <script src="../static/index.js?ver=37"></script>
+        <script src="../static/index.js?ver=52"></script>
 
         <style>
             .item:hover {
@@ -26,17 +26,20 @@
                 <button id="btn_context" class="btn btn-primary" onclick="suggestion()">Show context!</button>
                 <div id="select_box">
                     <ul style="width:100%">
-                        <li class="item" onclick="selection(this.innerHTML)"></li>
-                        <li class="item" onclick="selection(this.innerHTML)"></li>
-                        <li class="item" onclick="selection(this.innerHTML)"></li>
-                        <li class="item" onclick="selection(this.innerHTML)"></li>
+                        <p class="item" onclick="selection(this.innerHTML)">
+                            <img src="{{url_for('static',filename='images/graph01.png')}}" width='300'/>
+                        </p>
+                        <p class="item" onclick="selection(this.innerHTML)">
+                            <img src="{{url_for('static',filename='images/graph02.png')}}" width='300'/>
+                        </p>
+                        <p class="item" onclick="selection(this.innerHTML)">
+                            <img src="{{url_for('static',filename='images/graph03.png')}}" width='300'/>
+                        </p>
+                        <p class="item" onclick="selection(this.innerHTML)">
+                            <img src="{{url_for('static',filename='images/graph04.png')}}" width='300'/>
+                        </p>
                     </ul>
                 </div>
-                {% if True %}
-                <div>
-                    <img src="{{ url_for('static', filename=image_file) }}" width=500/>
-                </div>
-                {% endif %}
                 <button id="btn_wordcloud" class="btn btn-primary" onclick="GenerateWordcloud()">Show WordCloud!</button>
                 <button id="btn_news" class="btn btn-primary" onclick="GetNews()">Get News!</button>
             </div>

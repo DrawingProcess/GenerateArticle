@@ -12,7 +12,7 @@ if response.status_code == 200:
     res = response.text
     print(res)
     # 파일이 있는지 찾고 있으면 바로 덮어쓰기, 없으면 생성후 작성.
-    filename = "./source/%s.txt" % params['input']
+    filename = "./images/%s.txt" % params['input']
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(res)
 else:
