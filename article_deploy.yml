@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: article
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: article-pods-label
+  template:
+    metadata:
+      name: article-pod
+      labels:
+        app: article-label
+    spec:
+      containers:
+        - name: article-con
+          image: tjdwns0714/article:1.5
+          ports:
+            - containerPort: 3000
